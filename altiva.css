@@ -1,0 +1,230 @@
+/*------------------*/
+/* Basic Code Shell */
+/*------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
+/* Optional min width: 320px/20rem */
+html {
+	min-width: 20rem;
+}
+
+body {
+	font-size: 0.75rem;
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.box,
+.box_hero {
+	width: 100%;
+	max-width: 91.5rem; /* 1400px + 64px */
+	margin: 0 auto;
+}
+
+.box {
+	padding: 0 2rem;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+/*@media (max-width: 89.5rem) {
+	.box {
+		padding: 0 2rem;
+	}
+}*/
+
+@media (max-width: 45rem) {
+	.box {
+		padding: 0 1.5rem;
+	}
+}
+
+@media (max-width: 30rem) {
+	.box {
+		padding: 0 1.125rem;
+	}
+}
+
+/*** GRID ***/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0;
+	margin: 0;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/*margin: 0% 0 0% 1.6%;*/
+	margin: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 { width: 100%; }
+.span_1_of_2 { width: 50%; }
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.66%; }
+.span_1_of_3 { width: 33.33%; }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 { width: 100%; }
+.span_3_of_4 { width: 74.6%; }
+.span_2_of_4 { width: 49.2%; }
+.span_1_of_4 { width: 23.8%; }
+
+/*  GRID OF FIVE  */
+.span_5_of_5 { width: 100%; }
+.span_4_of_5 { width: 79.68%; }
+.span_3_of_5 { width: 59.36%; }
+.span_2_of_5 { width: 39.04%; }
+.span_1_of_5 { width: 18.72%; }
+
+/*  GRID OF SIX  */
+.span_6_of_6 { width: 100%; }
+.span_5_of_6 { width: 83.06%; }
+.span_4_of_6 { width: 66.13%; }
+.span_3_of_6 { width: 49.2%; }
+.span_2_of_6 { width: 32.26%; }
+.span_1_of_6 { width: 15.33%; }
+
+/* RESPONSIVE */
+
+@media (max-width: 40rem) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+	.span_1_of_5, .span_2_of_5, .span_3_of_5, .span_4_of_5, .span_5_of_5 { width: 100%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}
+
+/*** SVG SITES ***/
+.svg-container{
+ display: inline-block;
+ position: relative;
+ width: 100%;
+ /*padding-bottom: 60%;*/ /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
+ vertical-align: top; /* top | middle | bottom ... do what you want */
+}
+
+
+.svg { /* svg into : object, img or inline */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/ /* only required for <img /> */
+}
+
+.svg-right { /* svg into : object, img or inline */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 94%;
+  width: 100%; /* only required for <img /> */
+}
+
+/* FLOAT OPTIONS */
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+/* TEXT AND ALIGNMENT */
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.strong {
+	font-weight: 600;
+}
+
+.underline {
+	text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+.underline:after {
+	content: '';
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    border-width: 0 0 0.0625rem;
+    border-style: solid;
+}
+
+/* COLORS */
+.grey {
+	background-color: #f5f9fb;
+}
+
+/** COMPONENTS **/
+
+.button, input, button {
+	border: 0;
+	border-radius: 0.2rem;
+}
+
+.input {
+	padding: 0 0.8rem;
+}
+
+.button {
+	background-color: #31aff5;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
