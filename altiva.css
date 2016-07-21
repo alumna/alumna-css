@@ -129,6 +129,15 @@ a:active {
 .col_2_of_6 { width: 32.26%; }
 .col_1_of_6 { width: 15.33%; }
 
+/*  GRID OF SEVEN  */
+.col_7_of_7 { width: 100%; }
+.col_6_of_7 { width: 85.71%; }
+.col_5_of_7 { width: 71.42%; }
+.col_4_of_7 { width: 57.14%; }
+.col_3_of_7 { width: 42.85%; }
+.col_2_of_7 { width: 28.57%; }
+.col_1_of_7 { width: 14.28%; }
+
 /*  GRID OF EIGHT  */
 .col_8_of_8 { width: 100%; }
 .col_7_of_8 { width: 87.5%; }
@@ -139,6 +148,56 @@ a:active {
 .col_2_of_8 { width: 25%; }
 .col_1_of_8 { width: 12.5%; }
 
+/*  GRID OF NINE  */
+.col_9_of_9 { width: 100%; }
+.col_8_of_9 { width: 88.88%; }
+.col_7_of_9 { width: 77.77%; }
+.col_6_of_9 { width: 66.66%; }
+.col_5_of_9 { width: 55.55%; }
+.col_4_of_9 { width: 44.44%; }
+.col_3_of_9 { width: 33.33%; }
+.col_2_of_9 { width: 22.22%; }
+.col_1_of_9 { width: 11.11%; }
+
+/*  GRID OF TEN  */
+.col_10_of_10 { width: 100%; }
+.col_9_of_10 { width: 90%; }
+.col_8_of_10 { width: 80%; }
+.col_7_of_10 { width: 70%; }
+.col_6_of_10 { width: 60%; }
+.col_5_of_10 { width: 50%; }
+.col_4_of_10 { width: 40%; }
+.col_3_of_10 { width: 30%; }
+.col_2_of_10 { width: 20%; }
+.col_1_of_10 { width: 10%; }
+
+/*  GRID OF ELEVEN  */
+.col_11_of_11 { width: 100%; }
+.col_10_of_11 { width: 90.90%; }
+.col_9_of_11 { width: 81.81%; }
+.col_8_of_11 { width: 72.72%; }
+.col_7_of_11 { width: 63.63%; }
+.col_6_of_11 { width: 54.54%; }
+.col_5_of_11 { width: 45.45%; }
+.col_4_of_11 { width: 36.36%; }
+.col_3_of_11 { width: 27.27%; }
+.col_2_of_11 { width: 18.18%; }
+.col_1_of_11 { width: 9.090%; }
+
+/*  GRID OF TWELVE  */
+.col_12_of_12 { width: 100%; }
+.col_11_of_12 { width: 91.66%; }
+.col_10_of_12 { width: 83.33%; }
+.col_9_of_12 { width: 75%; }
+.col_8_of_12 { width: 66.66%; }
+.col_7_of_12 { width: 58.33%; }
+.col_6_of_12 { width: 50%; }
+.col_5_of_12 { width: 41.66%; }
+.col_4_of_12 { width: 33.33%; }
+.col_3_of_12 { width: 25%; }
+.col_2_of_12 { width: 16.66%; }
+.col_1_of_12 { width: 8.333%; }
+
 /* RESPONSIVE */
 
 @media (max-width: 40rem) {
@@ -147,7 +206,12 @@ a:active {
 	.col_1_of_4, .col_2_of_4, .col_3_of_4, .col_4_of_4 { width: 100% !important; }
 	.col_1_of_5, .col_2_of_5, .col_3_of_5, .col_4_of_5, .col_5_of_5 { width: 100% !important; }
 	.col_1_of_6, .col_2_of_6, .col_3_of_6, .col_4_of_6, .col_5_of_6, .col_6_of_6 { width: 100% !important; }
+	.col_1_of_7, .col_2_of_7, .col_3_of_7, .col_4_of_7, .col_5_of_7, .col_6_of_7, .col_7_of_7 { width: 100% !important; }
 	.col_1_of_8, .col_2_of_8, .col_3_of_8, .col_4_of_8, .col_5_of_8, .col_6_of_8, .col_7_of_8, .col_8_of_8 { width: 100% !important; }
+	.col_1_of_9, .col_2_of_9, .col_3_of_9, .col_4_of_9, .col_5_of_9, .col_6_of_9, .col_7_of_9, .col_8_of_9, .col_9_of_9 { width: 100% !important; }
+	.col_1_of_10, .col_2_of_10, .col_3_of_10, .col_4_of_10, .col_5_of_10, .col_6_of_10, .col_7_of_10, .col_8_of_10, .col_9_of_10, .col_10_of_10 { width: 100% !important; }
+	.col_1_of_11, .col_2_of_11, .col_3_of_11, .col_4_of_11, .col_5_of_11, .col_6_of_11, .col_7_of_11, .col_8_of_11, .col_9_of_11, .col_10_of_11, .col_11_of_11 { width: 100% !important; }
+	.col_1_of_12, .col_2_of_12, .col_3_of_12, .col_4_of_12, .col_5_of_12, .col_6_of_12, .col_7_of_12, .col_8_of_12, .col_9_of_12, .col_10_of_12, .col_11_of_12, .col_12_of_12 { width: 100% !important; }
 }
 
 
