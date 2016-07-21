@@ -10,15 +10,15 @@ Altiva CSS micro-library for rapid and responsive front-end interface developmen
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Your Incredible Website</title>
-		<link rel="stylesheet" href="/css/altiva.css">
-	</head>
-	<body>
-		
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Incredible Website</title>
+	<link rel="stylesheet" href="css/altiva.min.css">
+</head>
+<body>
+	
+</body>
 </html>
 ```
 
@@ -30,27 +30,27 @@ Altiva CSS micro-library for rapid and responsive front-end interface developmen
 
 ```html
 ...
-	<body>
-		
-		<div class="section group">
-			<div class="box"> <!-- This is optional -->
-				
-				<div class="col col_1_of_3">
-					First column of three
-				</div>
-
-				<div class="col col_1_of_3">
-					Second column of three
-				</div>
-
-				<div class="col col_1_of_3">
-					Third column of three
-				</div>
-
-
+<body>
+	
+	<div class="section group">
+		<div class="box"> <!-- This is optional -->
+			
+			<div class="col col_1_of_3">
+				<!-- First column of three -->
 			</div>
-		</div>
 
-	</body>
+			<div class="col col_1_of_3">
+				<!-- Second column of three -->
+			</div>
+
+			<div class="col col_1_of_3">
+				<!-- Third column of three -->
+			</div>
+
+
+		</div>
+	</div>
+
+</body>
 ...
 ```
