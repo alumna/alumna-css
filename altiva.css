@@ -79,6 +79,7 @@ a:active {
 	clear: both;
 	padding: 0;
 	margin: 0;
+	text-align: center;
 }
 
 /*  COLUMN SETUP  */
@@ -87,6 +88,7 @@ a:active {
 	float:left;
 	/*margin: 0% 0 0% 1.6%;*/
 	margin: 0;
+	text-align: center;
 }
 .col:first-child { margin-left: 0; }
 
@@ -216,6 +218,10 @@ a:active {
 
 
 /*** SVG SITES ***/
+svg {
+	display: inline-block;
+}
+
 .svg-container{
  display: inline-block;
  position: relative;
@@ -223,7 +229,6 @@ a:active {
  /*padding-bottom: 60%;*/ /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
  vertical-align: top; /* top | middle | bottom ... do what you want */
 }
-
 
 .svg { /* svg into : object, img or inline */
   display: block;
