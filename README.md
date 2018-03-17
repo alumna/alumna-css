@@ -33,27 +33,23 @@ Altiva CSS micro-library for rapid and responsive front-end interface developmen
 
 ```html
 ...
-<body>
-	
-	<div class="section group">
-		<div class="box"> <!-- This is optional -->
-			
-			<div class="col col_1_of_3">
-				<!-- First column of three -->
-			</div>
-
-			<div class="col col_1_of_3">
-				<!-- Second column of three -->
-			</div>
-
-			<div class="col col_1_of_3">
-				<!-- Third column of three -->
-			</div>
-
-
+<div class="section group">
+	<div class="box"> <!-- This is optional -->
+		
+		<div class="col col_1_of_3">
+			<!-- First column of three -->
 		</div>
-	</div>
 
-</body>
+		<div class="col col_1_of_3">
+			<!-- Second column of three -->
+		</div>
+
+		<div class="col col_1_of_3">
+			<!-- Third column of three -->
+		</div>
+
+
+	</div>
+</div>
 ...
 ```
