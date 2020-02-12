@@ -7,7 +7,7 @@ Altiva CSS micro-library for rapid and responsive front-end interface developmen
 
  1. Create a `css` folder inside your project.
  2. Create a new file `design.css` inside the `css` folder.
- 2. [Download](https://raw.githubusercontent.com/Altiva/altiva-css/master/altiva.min.css) Altiva CSS in the same folder and include these files in your html project:
+ 2. [Download](https://raw.githubusercontent.com/alumna/altiva-css/master/altiva.min.css) Altiva CSS in the same folder and include these files in your html project:
 
 ```html
 <!DOCTYPE html>
