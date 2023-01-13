@@ -1,5 +1,5 @@
-# altiva-css
-Altiva CSS micro-library for rapid and responsive front-end interface development
+# alumna-css
+Alumna CSS micro-library for rapid and responsive front-end interface development
 
 ## Install and Quick Start
 
@@ -7,7 +7,7 @@ Altiva CSS micro-library for rapid and responsive front-end interface developmen
 
  1. Create a `css` folder inside your project.
  2. Create a new file `design.css` inside the `css` folder.
- 2. [Download](https://raw.githubusercontent.com/alumna/altiva-css/master/altiva.min.css) Altiva CSS in the same folder and include these files in your html project:
+ 2. [Download](https://raw.githubusercontent.com/alumna/alumna-css/master/alumna.min.css) Alumna CSS in the same folder and include these files in your html project:
 
 ```html
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ Altiva CSS micro-library for rapid and responsive front-end interface developmen
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Your Incredible Website</title>
-	<link rel="stylesheet" href="css/altiva.min.css">
+	<link rel="stylesheet" href="css/alumna.min.css">
 	<link rel="stylesheet" href="css/design.css">
 </head>
 <body>
