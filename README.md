@@ -62,4 +62,6 @@ Alumna CSS micro-library for rapid and responsive front-end interface developmen
 - `1.1.2` | `2018-03-17` - Remove `body` tag from example
 - `1.1.2` | `2023-01-13`
     - Set just one font alongside `sans-serif` alias
+    - Removing old `zoom: 1` fallback for IE 6/7
+    - Fix grid percentages errors _(from a non-used case of grid with spaces)_
 
