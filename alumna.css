@@ -388,55 +388,55 @@ input:where([type='button'], [type='reset'], [type='submit']),
 /*------------------*/
 
 :root {
-    --gap: 1rem;
-    --padding-small: 1.125rem;
-    --padding-medium: 1.5rem;
-    --padding-large: 2rem;
+  --gap: 1rem;
+  --padding-small: 1.125rem;
+  --padding-medium: 1.5rem;
+  --padding-large: 2rem;
 }
 
 /* BOXES */
 .box,
 .hero-box {
-    width: 100%;
-    max-width: 91.5rem; /* 1400px + 64px */
-    margin: 0 auto;
+  width: 100%;
+  max-width: 91.5rem; /* 1400px + 64px */
+  margin: 0 auto;
 }
 
 .box {
-    padding: 0 var(--padding-small); /* Mobile-first: smallest padding */
+  padding: 0 var(--padding-small); /* Mobile-first: smallest padding */
 }
 
 @media (min-width: 30rem) {
-    .box {
-        padding: 0 var(--padding-medium);
-    }
+  .box {
+    padding: 0 var(--padding-medium);
+  }
 }
 
 @media (min-width: 45rem) {
-    .box {
-        padding: 0 var(--padding-large);
-    }
+  .box {
+    padding: 0 var(--padding-large);
+  }
 }
 
 /* GRID */
 /* SECTIONS */
 .section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  text-align: center;
 }
 
 /* COLUMN SETUP */
 .col {
-    text-align: center;
+  text-align: center;
 }
 
 /* COLUMN WHICH ALLOWS SUB-COLUMNS BY BECOMING A SUB-SECTION */
 .sub-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
 }
 
 
@@ -533,7 +533,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
 
 /* RESPONSIVE GRID */
 @media (max-width: 40rem) {
-    [class*="col-"] { flex: 0 0 100%; }
+  [class*="col-"] { flex: 0 0 100%; }
 }
 
 /* UTILITY CLASSES */
@@ -543,16 +543,16 @@ input:where([type='button'], [type='reset'], [type='submit']),
 .center { text-align: center; }
 .strong { font-weight: 600; }
 .underline {
-    text-decoration: none;
-    position: relative;
-    white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
 }
 .underline:after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-width: 0 0 0.0625rem;
-    border-style: solid;
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-width: 0 0 0.0625rem;
+  border-style: solid;
 }
