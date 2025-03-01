@@ -14,14 +14,14 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Your Incredible Website</title>
-	<link rel="stylesheet" href="css/alumna.min.css">
-	<link rel="stylesheet" href="css/design.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Incredible Website</title>
+  <link rel="stylesheet" href="css/alumna.min.css">
+  <link rel="stylesheet" href="css/design.css">
 </head>
 <body>
-	
+  
 </body>
 </html>
 ```
@@ -33,18 +33,18 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 
 ```html
 <div class="section">
-		
-	<div class="col col-1-3">
-		<!-- First column of three -->
-	</div>
+    
+  <div class="col col-1-3">
+    <!-- First column of three -->
+  </div>
 
-	<div class="col col-1-3">
-		<!-- Second column of three -->
-	</div>
+  <div class="col col-1-3">
+    <!-- Second column of three -->
+  </div>
 
-	<div class="col col-1-3">
-		<!-- Third column of three -->
-	</div>
+  <div class="col col-1-3">
+    <!-- Third column of three -->
+  </div>
 
 </div>
 ```
@@ -56,18 +56,18 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 
 ```html
 <div class="section box">
-		
-	<div class="col col-1-3">
-		<!-- First column of three -->
-	</div>
+    
+  <div class="col col-1-3">
+    <!-- First column of three -->
+  </div>
 
-	<div class="col col-1-3">
-		<!-- Second column of three -->
-	</div>
+  <div class="col col-1-3">
+    <!-- Second column of three -->
+  </div>
 
-	<div class="col col-1-3">
-		<!-- Third column of three -->
-	</div>
+  <div class="col col-1-3">
+    <!-- Third column of three -->
+  </div>
 
 </div>
 ```
@@ -78,24 +78,24 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 
 ```html
 <div class="section">
-		
-	<div class="col col-1-3 sub-section">
-		<div class="col col-1-2">
-			<!-- First sub-column -->	
-		</div>
+    
+  <div class="col col-1-3 sub-section">
+    <div class="col col-1-2">
+      <!-- First sub-column -->  
+    </div>
 
-		<div class="col col-1-2">
-			<!-- Second sub-column -->	
-		</div>
-	</div>
+    <div class="col col-1-2">
+      <!-- Second sub-column -->  
+    </div>
+  </div>
 
-	<div class="col col-1-3">
-		<!-- Second column of three -->
-	</div>
+  <div class="col col-1-3">
+    <!-- Second column of three -->
+  </div>
 
-	<div class="col col-1-3">
-		<!-- Third column of three -->
-	</div>
+  <div class="col col-1-3">
+    <!-- Third column of three -->
+  </div>
 
 </div>
 ```
