@@ -33,18 +33,18 @@ Alumna CSS micro-library for rapid and responsive front-end interface developmen
 
 ```html
 ...
-<div class="section group">
+<div class="section">
 	<div class="box"> <!-- This is optional -->
 		
-		<div class="col col_1_of_3">
+		<div class="col col-1-3">
 			<!-- First column of three -->
 		</div>
 
-		<div class="col col_1_of_3">
+		<div class="col col-1-3">
 			<!-- Second column of three -->
 		</div>
 
-		<div class="col col_1_of_3">
+		<div class="col col-1-3">
 			<!-- Third column of three -->
 		</div>
 
@@ -55,6 +55,15 @@ Alumna CSS micro-library for rapid and responsive front-end interface developmen
 ```
 
 ## Changelog
+
+- `2.0.0` | `2025-02-28`
+    - New modernized strategy based on flex
+    - Shorter class names for columns, e.g. `col-1-3` instead of `col_1_of_3`
+    - Removed redundant full-width classes, in favor of just `col-1-1` for such scenario
+    - CSS variables for easier customization and consistency
+    - Mobile-First Design: base styles start from smallest screens (mobile) and use min-width media queries to add styles for larger screens
+
+---
 
 - `1.0.0` | `2016-03-30` - First release
 - `1.1.0` | `2016-07-21` - 12 columns
