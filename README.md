@@ -102,6 +102,8 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 
 ## Changelog
 
+- `2.0.1` | `2025-12-29`
+    - **Fix:** Gap removed for correct column width
 - `2.0.0` | `2025-02-28`
     - **New:** Flexbox-based grid system for modern, responsive layouts.
     - **New:** Added Tailwind Preflight (based on `modern-normalize`) for consistent cross-browser styling.

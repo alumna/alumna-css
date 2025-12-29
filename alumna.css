@@ -388,7 +388,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
 /*------------------*/
 
 :root {
-  --gap: 1rem;
+  --gap: 0;
   --padding-small: 1.125rem;
   --padding-medium: 1.5rem;
   --padding-large: 2rem;
