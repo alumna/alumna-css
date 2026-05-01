@@ -72,6 +72,48 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 </div>
 ```
 
+### Optional - Adding gaps between columns with `--gap`
+
+ 1. Every `.section` and `.sub-section` starts with `--gap: 0rem`.
+ 2. Override it per section to add space between columns without breaking the proportions. The grid automatically subtracts the gap from each column width.
+
+```html
+<div class="section box" style="--gap:2rem">
+    
+  <div class="col col-1-3">
+    <!-- First column -->
+  </div>
+
+  <div class="col col-1-3">
+    <!-- Second column -->
+  </div>
+
+  <div class="col col-1-3">
+    <!-- Third column -->
+  </div>
+
+</div>
+```
+
+ 3. Use any valid CSS length (rem is recommended). Gaps are local to the section, so other sections keep their own value:
+
+```html
+<!-- no gap -->
+<div class="section">...</div>
+
+<!-- 1rem gap only here -->
+<div class="section" style="--gap:1rem">...</div>
+```
+
+ 4. Works the same for nested grids:
+
+```html
+<div class="col col-1-2 sub-section" style="--gap:.75rem">
+  <div class="col col-1-2">...</div>
+  <div class="col col-1-2">...</div>
+</div>
+```
+
 ### Optional - Sub-Columns with `.sub-section`
 
  1. Add the `sub-section` class to a column to create sub-columns directly inside it, simplifying your HTML by reducing nesting:
@@ -102,6 +144,10 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 
 ## Changelog
 
+- `2.1.0` | `2026-05-01`
+    - **New:** Gap-aware grid. Every `.section` and `.sub-section` now supports `--gap` (defaults to `0rem`). Column widths automatically subtract the gap, so `col-1-3` stays one-third even with spacing.
+    - **Changed:** Column classes now use CSS variables (`--p`) for proportional widths, enabling clean `calc()` support for gaps.
+    - **Improved:** `.col` defaults to `flex: 1 1 0%` for better equal distribution with gaps.
 - `2.0.1` | `2025-12-29`
     - **Fix:** Gap removed for correct column width
 - `2.0.0` | `2025-02-28`
