@@ -1,6 +1,16 @@
 # alumna-css
 Alumna CSS is a micro-library for rapid and responsive front-end interface development.
 
+## Index
+
+- [Install and Quick Start](#install-and-quick-start)
+- [Stack](#stack)
+- [Cluster](#cluster)
+- [Overlay](#overlay)
+- [Table wrap](#table-wrap)
+- [App shell](#app-shell)
+- [Changelog](#changelog)
+
 ## Install and Quick Start
 
 ### Step 1
@@ -142,8 +152,305 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 </div>
 ```
 
+The classes below are layout only. Put colors and type in `design.css`.
+
+## Stack
+
+`.stack` is a vertical flex column. The gap is `--stack-gap` (`1rem` on `:root`). Nested stacks inherit that gap until you set a new value.
+
+```html
+<div class="stack">
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email">
+</div>
+```
+
+A form is a stack of fields. Tighten the gap inside each field.
+
+```html
+<form class="stack">
+  <div class="stack" style="--stack-gap: 0.5rem">
+    <label for="field-email">Email</label>
+    <input id="field-email" type="email" name="email">
+  </div>
+  <div class="stack" style="--stack-gap: 0.5rem">
+    <label for="field-name">Name</label>
+    <input id="field-name" type="text" name="name">
+  </div>
+  <button type="submit">Save</button>
+</form>
+```
+
+## Cluster
+
+`.cluster` is a wrapping row of items that keep their own width. The gap is `--cluster-gap` (`0.5rem` on `:root`).
+
+`.section` is the page grid. It uses `--gap`. Children with `col-*` become full width at `40rem` and below. `.cluster` children do not. Do not put `col-*` on cluster children.
+
+```html
+<div class="cluster">
+  <button type="button">Save</button>
+  <button type="button">Cancel</button>
+</div>
+```
+
+A grid column can hold a cluster. The columns follow the section. The buttons stay a row.
+
+```html
+<div class="section">
+  <div class="col col-2-3">
+    <p>Article text.</p>
+  </div>
+  <div class="col col-1-3">
+    <div class="cluster" style="--cluster-gap: 0.75rem">
+      <button type="button">Edit</button>
+      <button type="button">Share</button>
+      <button type="button">More</button>
+    </div>
+  </div>
+</div>
+```
+
+## Overlay
+
+`.overlay` covers the viewport: `position: fixed`, `inset: 0`, `z-index: 50`. It does not paint a background. Add that in `design.css`. Native `<dialog>` already has `::backdrop`. Skip `.overlay` there.
+
+```html
+<button class="overlay" type="button" aria-label="Dismiss"></button>
+```
+
+The overlay sits on top of the page. Clicking it should hide it. You will not see the layer until you paint a background.
+
+```html
+<div class="stack">
+  <p>Page content.</p>
+  <button type="button" id="open-layer">Open layer</button>
+</div>
+<button class="overlay" type="button" aria-label="Dismiss" id="layer" hidden></button>
+<script>
+  document.getElementById("open-layer").onclick = function () {
+    document.getElementById("layer").hidden = false;
+  };
+  document.getElementById("layer").onclick = function () {
+    this.hidden = true;
+  };
+</script>
+```
+
+## Table wrap
+
+`.table-wrap` is full width with `overflow-x: auto`. Put a real `<table>` inside. It does not style cells.
+
+```html
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ada</td>
+        <td>Engineer</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+A heading and a cluster can sit above the wrap. Wide rows scroll inside the wrap, not the page.
+
+```html
+<div class="stack">
+  <div class="cluster">
+    <span>Invoices</span>
+    <button type="button">Export</button>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Invoice</th>
+          <th>Status</th>
+          <th>Method</th>
+          <th>Amount</th>
+          <th>Issued</th>
+          <th>Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INV-001</td>
+          <td>Paid</td>
+          <td>Card</td>
+          <td>250.00</td>
+          <td>2026-01-12</td>
+          <td>2026-01-26</td>
+        </tr>
+        <tr>
+          <td>INV-002</td>
+          <td>Due</td>
+          <td>Transfer</td>
+          <td>150.00</td>
+          <td>2026-02-03</td>
+          <td>2026-02-17</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```
+
+## App shell
+
+`.shell` is a viewport-tall row: `.sidebar` plus `.shell-main`. The main column is a `.topbar` over `.shell-body`.
+
+```html
+<div class="shell" id="app">
+  <button class="shell-backdrop" type="button" aria-label="Close menu"></button>
+  <aside class="sidebar" id="app-sidebar">
+    <div class="sidebar-header">
+      <a class="sidebar-link" href="/">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+        <span>Acme</span>
+      </a>
+    </div>
+    <div class="sidebar-content">
+      <nav class="sidebar-menu" aria-label="Main">
+        <a class="sidebar-link" href="/">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+          <span>Inbox</span>
+        </a>
+        <a class="sidebar-link" href="/settings">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+    <div class="sidebar-footer">
+      <a class="sidebar-link" href="/account">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+        <span>Account</span>
+      </a>
+    </div>
+  </aside>
+  <div class="shell-main">
+    <header class="topbar">
+      <button class="shell-fold" type="button">Fold</button>
+      <button class="shell-menu" type="button" aria-controls="app-sidebar">Menu</button>
+    </header>
+    <div class="shell-body">
+      <p>Main content.</p>
+    </div>
+  </div>
+</div>
+<script>
+  var app = document.getElementById("app");
+  document.querySelector("#app .shell-menu").onclick = function () {
+    app.setAttribute("data-open", "");
+  };
+  document.querySelector("#app .shell-backdrop").onclick = function () {
+    app.removeAttribute("data-open");
+  };
+  document.querySelector("#app .shell-fold").onclick = function () {
+    app.toggleAttribute("data-collapsed");
+  };
+</script>
+```
+
+At `40rem` and below, the sidebar is off-canvas. `.shell-menu` becomes visible. Set `data-open` on `.shell` to slide the rail in. `.shell-backdrop` covers the page; clear `data-open` when it is clicked.
+
+Wider than `40rem`, `.shell-fold` is the desktop control. `.shell-menu` stays hidden. Set `data-collapsed` to shrink the rail to `--sidebar-width-icon`. Then `.sidebar-label`, `.sidebar-sub`, `.sidebar-chevron`, `.stack` in the header or footer, and a `<span>` inside `.sidebar-link` hide. Put a small icon before the span so the rail still has a mark.
+
+Widths (set on `:root` or on `.shell`):
+
+- `--sidebar-width` — `16rem`. Desktop rail.
+- `--sidebar-width-icon` — `3rem`. Desktop rail when `data-collapsed`.
+- `--sidebar-width-mobile` — `18rem`. Off-canvas width at `40rem` and below.
+
+A collapsed rail with groups, a search field that hides, and nested links:
+
+```html
+<div class="shell" id="app-fold" data-collapsed style="--sidebar-width: 18rem">
+  <button class="shell-backdrop" type="button" aria-label="Close menu"></button>
+  <aside class="sidebar" id="fold-sidebar">
+    <div class="sidebar-header">
+      <a class="sidebar-link" href="/">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+        <span>Acme</span>
+      </a>
+      <div class="stack" style="--stack-gap: 0.5rem">
+        <input type="search" placeholder="Search" aria-label="Search">
+      </div>
+    </div>
+    <div class="sidebar-content">
+      <div class="sidebar-group">
+        <div class="sidebar-label">Platform</div>
+        <nav class="sidebar-menu" aria-label="Platform">
+          <details open>
+            <summary class="sidebar-link">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+              <span>Playground</span>
+              <svg class="sidebar-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+            </summary>
+            <div class="sidebar-sub">
+              <a class="sidebar-link" href="/history">History</a>
+              <a class="sidebar-link" href="/starred">Starred</a>
+            </div>
+          </details>
+          <a class="sidebar-link" href="/projects">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+            <span>Projects</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="cluster">
+        <a class="sidebar-link" href="/account">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"></circle></svg>
+          <span>Ada</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <div class="shell-main">
+    <header class="topbar">
+      <button class="shell-fold" type="button">Fold</button>
+      <button class="shell-menu" type="button" aria-controls="fold-sidebar">Menu</button>
+      <span>Inbox</span>
+    </header>
+    <div class="shell-body">
+      <div class="stack">
+        <p>Main content.</p>
+        <div class="cluster">
+          <button type="button">New</button>
+          <button type="button">Filter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var fold = document.getElementById("app-fold");
+  document.querySelector("#app-fold .shell-menu").onclick = function () {
+    fold.setAttribute("data-open", "");
+  };
+  document.querySelector("#app-fold .shell-backdrop").onclick = function () {
+    fold.removeAttribute("data-open");
+  };
+  document.querySelector("#app-fold .shell-fold").onclick = function () {
+    fold.toggleAttribute("data-collapsed");
+  };
+</script>
+```
+
 ## Changelog
 
+- Docs
+    - **Docs:** README examples for `.stack`, `.cluster`, `.overlay`, `.table-wrap`, and the app shell.
 - `3.0.0` - `2026-08-30`
     - **New:** Vertical `.stack` (`--stack-gap`) and wrapping `.cluster` (`--cluster-gap`) that are not the page `.section` grid.
     - **New:** App shell structure: `.shell`, `.sidebar`, `.shell-main`, `.topbar`, `.shell-body`, `.shell-menu`, `.shell-backdrop`, `.shell-fold`, with `data-open` / `data-collapsed` and `--sidebar-width` / `--sidebar-width-icon` / `--sidebar-width-mobile`.
