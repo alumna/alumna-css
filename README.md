@@ -144,6 +144,10 @@ Alumna CSS is a micro-library for rapid and responsive front-end interface devel
 
 ## Changelog
 
+- `3.0.0` - `2026-08-30`
+    - **New:** Vertical `.stack` (`--stack-gap`) and wrapping `.cluster` (`--cluster-gap`) that are not the page `.section` grid.
+    - **New:** App shell structure: `.shell`, `.sidebar`, `.shell-main`, `.topbar`, `.shell-body`, `.shell-menu`, `.shell-backdrop`, `.shell-fold`, with `data-open` / `data-collapsed` and `--sidebar-width` / `--sidebar-width-icon` / `--sidebar-width-mobile`.
+    - **New:** Sidebar regions `.sidebar-header`, `.sidebar-content`, `.sidebar-footer`, `.sidebar-group`, `.sidebar-menu`; nested `.sidebar-sub` / `.sidebar-chevron` (layout only); `.overlay`; `.table-wrap`.
 - `2.1.0` | `2026-05-01`
     - **New:** Gap-aware grid. Every `.section` and `.sub-section` now supports `--gap` (defaults to `0rem`). Column widths automatically subtract the gap, so `col-1-3` stays one-third even with spacing.
     - **Changed:** Column classes now use CSS variables (`--p`) for proportional widths, enabling clean `calc()` support for gaps.
