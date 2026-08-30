@@ -307,6 +307,16 @@ A heading and a cluster can sit above the wrap. Wide rows scroll inside the wrap
 
 `.shell` is a viewport-tall row: `.sidebar` plus `.shell-main`. The main column is a `.topbar` over `.shell-body`.
 
+In that frame the bar does not need `position: sticky`: it sits above `.shell-body`, which is the scroller. When the bar lives **inside** a scrolling column, add `data-pin`:
+
+```html
+<header class="topbar" data-pin>
+  <span>Inbox</span>
+</header>
+```
+
+Without `data-pin`, the same markup scrolls away with the column.
+
 ```html
 <div class="shell" id="app">
   <button class="shell-backdrop" type="button" aria-label="Close menu"></button>
@@ -449,6 +459,8 @@ A collapsed rail with groups, a search field that hides, and nested links:
 
 ## Changelog
 
+- 3.1.0
+    - **New:** `.topbar[data-pin]` sticks a topbar to the top of a scrolling ancestor (`position: sticky`, `top: 0`, `z-index: 10`). Background is not included.
 - Docs
     - **Docs:** README examples for `.stack`, `.cluster`, `.overlay`, `.table-wrap`, and the app shell.
 - `3.0.0` - `2026-08-30`

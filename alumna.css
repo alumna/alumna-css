@@ -712,6 +712,12 @@ summary.sidebar-link::-webkit-details-marker {
     gap: 0.5rem;
 }
 
+.topbar[data-pin] {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .shell-body {
     flex: 1 1 auto;
     min-height: 0;
