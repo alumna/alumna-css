@@ -472,7 +472,7 @@ A collapsed rail with groups, a search field that hides, and nested links:
     - **Changed:** Column classes now use CSS variables (`--p`) for proportional widths, enabling clean `calc()` support for gaps.
     - **Improved:** `.col` defaults to `flex: 1 1 0%` for better equal distribution with gaps.
 - `2.0.1` | `2025-12-29`
-    - **Fix:** Gap removed for correct column width
+    - **Fix:** Gap removed for correct column width.
 - `2.0.0` | `2025-02-28`
     - **New:** Flexbox-based grid system for modern, responsive layouts.
     - **New:** Added Tailwind Preflight (based on `modern-normalize`) for consistent cross-browser styling.
